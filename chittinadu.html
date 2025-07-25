@@ -1,0 +1,70 @@
+<HEAD></HEAD>
+<CENTER>
+    <H1>CHITTINADU CHICKEN </H1>
+
+    <BODY>
+        <IMG SRC="C:\Users\rit\Desktop\food app\Chittinadu.jpg" HEIGHT=" 200 " WDITH="200 ">
+        <P>
+            <H3>
+                curry, (from Tamil kari: “sauce”), in Western usage, a dish composed with a sauce or gravy seasoned with a mixture of ground spices
+                <br> that is thought to have originated in India and has since spread to many regions of the world. The foundation of many Indian
+                <br>curries is a mixture of onion, ginger, and garlic </H3>
+        </P>
+
+        <header>
+            <h2>Order your favorite food online!</h2>
+            <header>
+                <h1>Delicious Bites</h1>
+                <p>Order your favorite food online!</p>
+            </header>
+
+            <div class="container">
+
+                <div class="food-card">
+                    <p><strong>₹250</strong></p>
+                </div>
+
+                <!-- Address Form -->
+                <form id="addressForm">
+                    <h3>Enter Delivery Address:</h3>
+                    <label for="address">Full Address:</label>
+                    <input type="text" id="address" required placeholder="Enter your delivery address"> <br>
+                    <br>
+                    <br>
+                    <button type="submit">Buy & Confirm Order</button>
+                    <br>
+                    <br>
+                </form>
+                <!-- Confirmation Message -->
+                <div id="confirmation"></div>
+            </div>
+
+            <script>
+                document.getElementById("addressForm").addEventListener("submit", function(event) {
+                    event.preventDefault();
+                    const address = document.getElementById("address").value.trim();
+
+                    if (address === "") {
+                        alert("Please enter a delivery address.");
+                        return;
+                    }
+
+                    const confirmed = confirm("Pay ₹250 to confirm your order?");
+                    if (confirmed) {
+                        document.getElementById("confirmation").innerText =
+                            "✅ Your order is confirmed. Please wait. Your food will be delivered to: " + address + " in one hour.";
+                        document.getElementById("addressForm").reset();
+                    }
+                });
+            </script>
+</center>
+<center>
+    <A HREF="C:\Users\rit\Desktop\food app\home.html">
+        <b>
+        <BUTTON><b>Back to Home</b></BUTTON>
+        </b>
+    </A>
+</center>
+
+</html>
+</BODY>
